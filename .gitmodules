@@ -1,0 +1,3 @@
+[submodule "src/binwalk"]
+	path = src/binwalk
+	url = git://github.com/devttys0/binwalk
