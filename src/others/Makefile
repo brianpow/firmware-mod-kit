@@ -16,6 +16,7 @@ all:
 	make -C ./squashfs-2.0-nb4
 	make -C ./squashfs-4.2
 	make -C ./squashfs-4.2-official
+	make -C ./squashfs-4.3
 
 clean:
 	make -C ./squashfs-2.2-r2-7z
@@ -35,3 +36,4 @@ clean:
 	make -C ./squashfs-2.0-nb4 clean
 	make -C ./squashfs-4.2 clean
 	make -C ./squashfs-4.2-official clean
+	make -C ./squashfs-4.3 clean

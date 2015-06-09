@@ -29,6 +29,7 @@ others/squashfs-3.3-lzma/squashfs3.3/squashfs-tools \
 others/squashfs-3.3-grml-lzma/squashfs3.3/squashfs-tools \
 others/squashfs-3.4-cisco \
 others/squashfs-3.4-nb4 \
+others/squashfs-4.3 \
 others/squashfs-4.2-official \
 others/squashfs-4.2 \
 others/squashfs-4.0-lzma \

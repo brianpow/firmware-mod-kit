@@ -54,7 +54,7 @@ case $FS_TYPE in
 	"squashfs")
 		# Check for squashfs 4.0 realtek, which requires the -comp option to build lzma images.
 		if [ "$FS_COMPRESSION" == "lzma" ]; then
-			if [ "$(echo $MKFS | grep 'squashfs-4.0-realtek')" != "" ] || [ "$(echo $MKFS | grep 'squashfs-4.2')" != "" ]; then
+			if [ "$(echo $MKFS | grep 'squashfs-4.0-realtek')" != "" ] || [ "$(echo $MKFS | grep 'squashfs-4.2')" != "" ] || [ "$(echo $MKFS | grep 'squashfs-4.3')" != "" ]; then
 				COMP="-comp lzma"
 			else
 				COMP=""
