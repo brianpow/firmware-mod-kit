@@ -6,7 +6,23 @@ IMG="${1}"
 DIR="${2}"
 
 if [ "${DIR}" = "" ]; then
-	DIR="fmk"
+	FULLFILENAME=$(basename "$IMG")
+	FILEEXTENSION="${FULLFILENAME##*.}"
+	FILENAME="${FULLFILENAME%.*}"
+	if [ "${FILENAME}" == "" ]; then
+    	DIR="fmk"
+	else
+		DIR="$FILENAME"
+	fi
+	if [ -f "${DIR}" ] || [ -d "${DIR}" ]; then
+		for I in {1..90000}; do
+			NEW_DIR="${DIR}_${I}"
+			if [ ! -f "$NEW_DIR" ] && [ ! -d "$NEW_DIR" ]; then
+				DIR="$NEW_DIR"
+				break
+			fi
+		done
+	fi
 fi
 
 # Need to extract file systems as ROOT
